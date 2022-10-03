@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,100&display=swap');
+@import url('https://css.gg/check.css');
+@import url('https://css.gg/close.css');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.contents {
+    /* position: relative; */
+    border-style: solid;
+    border-radius: .5em;
+    padding: 1em 2em;
+    width: 20em;
+    /* position: relative; */
+    /* display: grid; */
+}
+
+.header {
+    font-style: 500;
+    font-size: 2.5em;
+    align-items: left;
+    margin-bottom: 1em;
+}
+
+input[type="text"] {
+    border: 1px solid;
+    width: 20em;
+    padding: 1em;
+    font-style: italic;
+    box-sizing: border-box;
+    border-radius: .3em;
+}
+
+.input {
+    margin-bottom: 2.5em;
+    padding: 0em;
+    display: flex;
+
+}
+
+.output {
+    padding: 0em;
+    position: relative;
+    display: flex;
+}
+
+
+/* Styling for tick icon */
+.gg-check {
+    background-color: teal;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    margin: 0em;
+    padding: 0em;
+}
+
+.gg-check::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 2px;
+    top: -4px;
+    width: 8px;
+    height: 15px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    transform-origin: bottom left;
+    transform: rotate(45deg)
+}
+
+/* end style */
+
+/* Styling for X icon */
+.gg-close {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 40px
+}
+
+.gg-close::after,
+.gg-close::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 1px
+}
+
+.gg-close::after {
+    transform: rotate(-45deg)
+}
+
+/* end styling */
+
+button[type="button"] {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: .5em;
+    /* Makes center */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.output-container {
+    padding: 0em;
+    display: grid;
+    /* grid-template-columns: auto; */
+}
+
+.output {
+    margin: 2em 0;
+}
+
+input[value="submit"] {}
