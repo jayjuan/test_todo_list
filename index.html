@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Todo List</title>
 </head>
 
@@ -17,9 +18,9 @@
         </div>
 
         <div class="input">
-            <form action="">
-                <input type="text" id="input" placeholder="Add new todo...">
-                <button type="button"><i class="gg-check" style="font-size: 5em;"></i></button>
+            <form action="#" id="form1">
+                <input type="text" id="inputText" name="inputText" placeholder="Add new todo...">
+                <button onclick="testFunction()" type="submit"><i class="gg-check" style="font-size: 5em;"></i></button>
                 
             </form>
         </div>
@@ -28,17 +29,16 @@
             <form action="">
                 <div class="output">
                     <input class="output-field" type="text">
-                    <button type="button"><i class="gg-close"></i></button>
+                    <button type="submit"><i class="gg-close"></i></button>
                 </div>
                 <div class="output">
                     <input class="output-field" type="text">
-                    <button type="button"><i class="gg-close"></i></button>
+                    <button type="submit"><i class="gg-close"></i></button>
                 </div>
                 <div class="output">
                     <input class="output-field" type="text">
-                    <button type="button"><i class="gg-close"></i></button>
+                    <button type="submit"><i class="gg-close"></i></button>
                 </div>
-
             </form>
         </div>
     </div>
