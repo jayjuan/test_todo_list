@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="script.js"></script>
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="contents">
+
+        <div class="header">
+            Todo List 
+
+        </div>
+
+        <div class="input">
+            <form method="POST" action="" id="form1">
+                {% csrf_token %}
+                <input type="text" id="inputText" name="inputText" placeholder="Add new todo...">
+                <button onclick="testFunction()" type="submit" name="input_but"><i class="gg-check" style="font-size: 5em;"></i></button>
+                
+            </form>
+        </div>
+
+        <div class="output-container">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {% for todo in todo_list %}
+                <div class="output">
+                    <input class="output-field" value="{{ todo }}" name="del" type="text">
+                    <button type="submit" name="del_but" value="{{todo.id}}"><i class="gg-close"></i></button>
+                </div>
+                {% endfor %}
+                <!-- <div class="output">
+                    <input class="output-field" type="text">
+                    <button type="submit"><i class="gg-close"></i></button>
+                </div>
+                <div class="output">
+                    <input class="output-field" type="text">
+                    <button type="submit"><i class="gg-close"></i></button>
+                </div>
+                <div class="output">
+                    <input class="output-field" type="text">
+                    <button type="submit"><i class="gg-close"></i></button>
+                </div> -->
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
